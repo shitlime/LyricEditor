@@ -42,10 +42,10 @@
         <KeyBinding Command="{StaticResource UndoShortcut}" Gesture="Ctrl+Z" />
         <KeyBinding Command="{StaticResource RedoShortcut}" Gesture="Ctrl+Y" />
         <KeyBinding Command="{StaticResource InsertShortcut}" Gesture="Insert" />
-        <KeyBinding Command="{StaticResource ShortShiftRight}" Gesture="Ctrl+Right" />
-        <KeyBinding Command="{StaticResource ShortShiftLeft}" Gesture="Ctrl+Left" />
-        <KeyBinding Command="{StaticResource LongShiftRight}" Gesture="Shift+Ctrl+Right" />
-        <KeyBinding Command="{StaticResource LongShiftLeft}" Gesture="Shift+Ctrl+Left" />
+        <KeyBinding Command="{StaticResource ShortShiftRight}" Gesture="Ctrl+Period" />
+        <KeyBinding Command="{StaticResource ShortShiftLeft}" Gesture="Ctrl+Comma" />
+        <KeyBinding Command="{StaticResource LongShiftRight}" Gesture="Shift+Ctrl+Period" />
+        <KeyBinding Command="{StaticResource LongShiftLeft}" Gesture="Shift+Ctrl+Comma" />
     </Window.InputBindings>
     <Window.CommandBindings>
         <CommandBinding Command="{StaticResource SetTimeShortcut}" Executed="SetTimeShortcut_Executed" />
