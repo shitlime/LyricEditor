@@ -509,6 +509,28 @@ namespace LyricEditor
             }
         }
 
+        private void TimeShift_Hotkey(object sender, RoutedEventArgs e)
+        {
+            if (!IsMediaAvailable)
+                return;
+
+            switch(sender)
+            {
+                case "ShortShiftLeft":
+                    MediaPlayer.Position -= ShortTimeShift;
+                    break;
+                case "ShortShiftRight":
+                    MediaPlayer.Position += ShortTimeShift;
+                    break;
+                case "LongShiftLeft":
+                    MediaPlayer.Position -= LongTimeShift;
+                    break;
+                case "LongShiftRight":
+                    MediaPlayer.Position += LongTimeShift;
+                    break;
+            }
+        }
+
         /// <summary>
         /// 时间轴点击
         /// </summary>
@@ -682,6 +704,18 @@ namespace LyricEditor
                 AddNewLine_Click(this, null);
             }
         }
+
+        private void ShortShiftRight_Executed(object sender, ExecutedRoutedEventArgs e) =>
+            TimeShift_Hotkey("ShortShiftRight", e);
+
+        private void ShortShiftLeft_Executed(object sender, ExecutedRoutedEventArgs e) =>
+            TimeShift_Hotkey("ShortShiftLeft", e);
+
+        private void LongShiftRight_Executed(object sender, ExecutedRoutedEventArgs e) =>
+            TimeShift_Hotkey("LongShiftRight", e);
+
+        private void LongShiftLeft_Executed(object sender, ExecutedRoutedEventArgs e) =>
+            TimeShift_Hotkey("LongShiftLeft", e);
 
         #endregion
     }
