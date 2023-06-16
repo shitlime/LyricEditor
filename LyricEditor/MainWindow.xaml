@@ -32,6 +32,11 @@
             <RoutedUICommand x:Key="ShortShiftLeft" />
             <RoutedUICommand x:Key="LongShiftRight" />
             <RoutedUICommand x:Key="LongShiftLeft" />
+            <RoutedUICommand x:Key="ExportLyric" />
+            <RoutedUICommand x:Key="ClearAll" />
+            <RoutedUICommand x:Key="DeleteLine" />
+            <RoutedUICommand x:Key="MoveUp" />
+            <RoutedUICommand x:Key="MoveDown" />
 
         </ResourceDictionary>
     </Window.Resources>
@@ -43,9 +48,18 @@
         <KeyBinding Command="{StaticResource RedoShortcut}" Gesture="Ctrl+Y" />
         <KeyBinding Command="{StaticResource InsertShortcut}" Gesture="Insert" />
         <KeyBinding Command="{StaticResource ShortShiftRight}" Gesture="Ctrl+Period" />
+        <KeyBinding Command="{StaticResource ShortShiftRight}" Gesture="F6" />
         <KeyBinding Command="{StaticResource ShortShiftLeft}" Gesture="Ctrl+Comma" />
+        <KeyBinding Command="{StaticResource ShortShiftLeft}" Gesture="F7" />
         <KeyBinding Command="{StaticResource LongShiftRight}" Gesture="Shift+Ctrl+Period" />
+        <KeyBinding Command="{StaticResource LongShiftRight}" Gesture="F9" />
         <KeyBinding Command="{StaticResource LongShiftLeft}" Gesture="Shift+Ctrl+Comma" />
+        <KeyBinding Command="{StaticResource LongShiftLeft}" Gesture="F10" />
+        <KeyBinding Command="{StaticResource ExportLyric}" Gesture="Ctrl+S" />
+        <KeyBinding Command="{StaticResource ClearAll}" Gesture="Shift+Delete" />
+        <KeyBinding Command="{StaticResource DeleteLine}" Gesture="Delete" />
+        <KeyBinding Command="{StaticResource MoveUp}" Gesture="Alt+Up" />
+        <KeyBinding Command="{StaticResource MoveDown}" Gesture="Alt+Down" />
     </Window.InputBindings>
     <Window.CommandBindings>
         <CommandBinding Command="{StaticResource SetTimeShortcut}" Executed="SetTimeShortcut_Executed" />
@@ -58,6 +72,11 @@
         <CommandBinding Command="{StaticResource ShortShiftLeft}" Executed="ShortShiftLeft_Executed" />
         <CommandBinding Command="{StaticResource LongShiftRight}" Executed="LongShiftRight_Executed" />
         <CommandBinding Command="{StaticResource LongShiftLeft}" Executed="LongShiftLeft_Executed" />
+        <CommandBinding Command="{StaticResource ExportLyric}" Executed="ExportLyric_Executed" />
+        <CommandBinding Command="{StaticResource ClearAll}" Executed="ClearAll_Executed" />
+        <CommandBinding Command="{StaticResource DeleteLine}" Executed="DeleteLine_Executed" />
+        <CommandBinding Command="{StaticResource MoveUp}" Executed="MoveUp_Executed" />
+        <CommandBinding Command="{StaticResource MoveDown}" Executed="MoveDown_Executed" />
     </Window.CommandBindings>
 
     <Grid>
@@ -228,7 +247,7 @@
                             </Style>
                         </Grid.Resources>
 
-                        <Button Name="ShortShiftLeft" ToolTip="小幅度快退" Click="TimeShift_Click">
+                        <Button Name="ShortShiftLeft" ToolTip="小幅度快退（F6）（Ctrl+,）" Click="TimeShift_Click">
                             <Image Margin="-2,0,0,0" Source="Icons/MediaButtonIcons/NavigateLeft.png" />
                         </Button>
                         <Button Name="PlayButton"
@@ -255,13 +274,13 @@
                         </Button>
                         <Button Name="ShortShiftRight"
                                 Grid.Column="2"
-                                ToolTip="小幅度快进"
+                                ToolTip="小幅度快进（F7）（Ctrl+.）"
                                 Click="TimeShift_Click">
                             <Image Margin="2,0,0,0" Source="Icons/MediaButtonIcons/NavigateRight.png" />
                         </Button>
                         <Button Name="LongShiftLeft"
                                 Grid.Row="1"
-                                ToolTip="大幅度快退"
+                                ToolTip="大幅度快退（F9）（Shift+Ctrl+,）"
                                 Click="TimeShift_Click">
                             <Image Margin="-2,0,0,0" Source="Icons/MediaButtonIcons/FastLeft.png" />
                         </Button>
@@ -275,7 +294,7 @@
                         <Button Name="LongShiftRight"
                                 Grid.Row="1"
                                 Grid.Column="2"
-                                ToolTip="大幅度快进"
+                                ToolTip="大幅度快进（F10）（Shift+Ctrl+.）"
                                 Click="TimeShift_Click">
                             <Image Margin="2,0,0,0" Source="Icons/MediaButtonIcons/FastRight.png" />
                         </Button>
@@ -404,7 +423,7 @@
             </Button>
             <Button Margin="0,0,0,10" Click="ClearAll_Click">
                 <Button.ToolTip>
-                    清空歌词文本
+                    清空歌词文本（Shift+Delete）
                 </Button.ToolTip>
                 <Image Source="Icons/ToolButtonIcons/trash.png" />
             </Button>
@@ -431,19 +450,19 @@
                 </Button>
                 <Button Click="DeleteLine_Click">
                     <Button.ToolTip>
-                        删除所选歌词行
+                        删除所选歌词行（Delete）
                     </Button.ToolTip>
                     <Image Source="Icons/ToolButtonIcons/delete1.png" />
                 </Button>
                 <Button Click="MoveUp_Click">
                     <Button.ToolTip>
-                        将所选歌词行上移
+                        将所选歌词行上移（Alt+Up）
                     </Button.ToolTip>
                     <Image Margin="1" Source="Icons/ToolButtonIcons/Navigate-up.png" />
                 </Button>
                 <Button Click="MoveDown_Click">
                     <Button.ToolTip>
-                        将所选歌词行下移
+                        将所选歌词行下移（Alt+Down）
                     </Button.ToolTip>
                     <Image Margin="1" Source="Icons/ToolButtonIcons/Navigate-down.png" />
                 </Button>

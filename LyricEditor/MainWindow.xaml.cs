@@ -717,6 +717,21 @@ namespace LyricEditor
         private void LongShiftLeft_Executed(object sender, ExecutedRoutedEventArgs e) =>
             TimeShift_Hotkey("LongShiftLeft", e);
 
+        private void ExportLyric_Executed(object sender, ExecutedRoutedEventArgs e) =>
+            ExportLyric_Click(this, e);
+
+        private void ClearAll_Executed(object sender, ExecutedRoutedEventArgs e) =>
+            ClearAll_Click(this, e);
+
+        private void DeleteLine_Executed(object sender, ExecutedRoutedEventArgs e) =>
+            DeleteLine_Click(this, e);
+
+        private void MoveUp_Executed(object sender, ExecutedRoutedEventArgs e) =>
+            MoveUp_Click(this, e);
+
+        private void MoveDown_Executed(object sender, ExecutedRoutedEventArgs e) =>
+            MoveDown_Click(this, e);
+
         #endregion
     }
 }
