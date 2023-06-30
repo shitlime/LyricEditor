@@ -247,7 +247,7 @@
                             </Style>
                         </Grid.Resources>
 
-                        <Button Name="ShortShiftLeft" ToolTip="小幅度快退（F6）（Ctrl+,）" Click="TimeShift_Click">
+                        <Button Name="ShortShiftLeft" ToolTip="小幅度快退（F7）（Ctrl+,）" Click="TimeShift_Click">
                             <Image Margin="-2,0,0,0" Source="Icons/MediaButtonIcons/NavigateLeft.png" />
                         </Button>
                         <Button Name="PlayButton"
@@ -274,13 +274,13 @@
                         </Button>
                         <Button Name="ShortShiftRight"
                                 Grid.Column="2"
-                                ToolTip="小幅度快进（F7）（Ctrl+.）"
+                                ToolTip="小幅度快进（F6）（Ctrl+.）"
                                 Click="TimeShift_Click">
                             <Image Margin="2,0,0,0" Source="Icons/MediaButtonIcons/NavigateRight.png" />
                         </Button>
                         <Button Name="LongShiftLeft"
                                 Grid.Row="1"
-                                ToolTip="大幅度快退（F9）（Shift+Ctrl+,）"
+                                ToolTip="大幅度快退（F10）（Shift+Ctrl+,）"
                                 Click="TimeShift_Click">
                             <Image Margin="-2,0,0,0" Source="Icons/MediaButtonIcons/FastLeft.png" />
                         </Button>
@@ -294,7 +294,7 @@
                         <Button Name="LongShiftRight"
                                 Grid.Row="1"
                                 Grid.Column="2"
-                                ToolTip="大幅度快进（F10）（Shift+Ctrl+.）"
+                                ToolTip="大幅度快进（F9）（Shift+Ctrl+.）"
                                 Click="TimeShift_Click">
                             <Image Margin="2,0,0,0" Source="Icons/MediaButtonIcons/FastRight.png" />
                         </Button>
