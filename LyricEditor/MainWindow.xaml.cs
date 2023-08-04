@@ -723,9 +723,6 @@ namespace LyricEditor
         private void ClearAll_Executed(object sender, ExecutedRoutedEventArgs e) =>
             ClearAll_Click(this, e);
 
-        private void DeleteLine_Executed(object sender, ExecutedRoutedEventArgs e) =>
-            DeleteLine_Click(this, e);
-
         private void MoveUp_Executed(object sender, ExecutedRoutedEventArgs e) =>
             MoveUp_Click(this, e);
 

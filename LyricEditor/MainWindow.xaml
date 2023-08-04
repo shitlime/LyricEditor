@@ -34,7 +34,6 @@
             <RoutedUICommand x:Key="LongShiftLeft" />
             <RoutedUICommand x:Key="ExportLyric" />
             <RoutedUICommand x:Key="ClearAll" />
-            <RoutedUICommand x:Key="DeleteLine" />
             <RoutedUICommand x:Key="MoveUp" />
             <RoutedUICommand x:Key="MoveDown" />
 
@@ -57,7 +56,6 @@
         <KeyBinding Command="{StaticResource LongShiftLeft}" Gesture="F10" />
         <KeyBinding Command="{StaticResource ExportLyric}" Gesture="Ctrl+S" />
         <KeyBinding Command="{StaticResource ClearAll}" Gesture="Shift+Delete" />
-        <KeyBinding Command="{StaticResource DeleteLine}" Gesture="Delete" />
         <KeyBinding Command="{StaticResource MoveUp}" Gesture="Alt+Up" />
         <KeyBinding Command="{StaticResource MoveDown}" Gesture="Alt+Down" />
     </Window.InputBindings>
@@ -74,7 +72,6 @@
         <CommandBinding Command="{StaticResource LongShiftLeft}" Executed="LongShiftLeft_Executed" />
         <CommandBinding Command="{StaticResource ExportLyric}" Executed="ExportLyric_Executed" />
         <CommandBinding Command="{StaticResource ClearAll}" Executed="ClearAll_Executed" />
-        <CommandBinding Command="{StaticResource DeleteLine}" Executed="DeleteLine_Executed" />
         <CommandBinding Command="{StaticResource MoveUp}" Executed="MoveUp_Executed" />
         <CommandBinding Command="{StaticResource MoveDown}" Executed="MoveDown_Executed" />
     </Window.CommandBindings>
